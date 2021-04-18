@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/_Shared/_Layout.cshtml";
+}
+
+<div class="main-wrapper">
+    <section class="cta-section theme-bg-light py-5">
+        <div class="container text-center">
+            <h2 class="heading">Актуальные темы на сегодня</h2>
+            <div class="intro">Добро пожаловать на мой блог. Подпишитесь и получайте мой последний пост в своем блоге в свой почтовый ящик.</div>
+            <form class="signup-form form-inline justify-content-center pt-3">
+                <div class="form-group">
+                    <label class="sr-only" for="semail">Your email</label>
+                    <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail" placeholder="Enter email">
+                </div>
+                <button type="submit" class="btn btn-primary">Подписаться</button>
+            </form>
+        </div><!--//container-->
+    </section>
+    <article class="blog-post px-3 py-5 p-md-5">
+        <div class="container">
+            <header class="blog-post-header">
+                <h2 class="title mb-2">@Model.BlogName</h2>
+            </header>
+
+            <div class="blog-post-body">
+                <figure class="blog-banner">
+                   <a href="/assets/images/@Model.ImageURL"><img class="img-fluid" src="/assets/images/@Model.ImageURL" 
+                   alt="image" /></a> 
+                </figure><!--//media-->
+                <p>@Html.Raw(Model.Explanation)</p>
+            </div>
+        </div>
+    </article>
+</div>
+
+<div class="main-wrapper">
+    <section class="promo-section theme-bg-light py-5 text-center">
+        <div class="container">
+            <h2 class="title">Promo Section Heading</h2>
+            <p>You can use this section to promote your side projects etc. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+            <figure class="promo-figure">
+                <a href="https://made4dev.com" target="_blank"><img class="img-fluid" src="assets/images/promo-banner.jpg" alt="image"></a>
+            </figure>
+        </div><!--//container-->
+    </section><!--//promo-section-->
+    <footer class="footer text-center py-2 theme-bg-dark">
+
+        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+        <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="#" target="_blank">Xiaoying Riley</a> for developers</small>
+
+    </footer>
+
+
+</div><!--//main-wrapper-->
